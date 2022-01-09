@@ -131,5 +131,6 @@ public class TechJobs {
                 System.out.println(key + ": " + value);
             }
         }
+        System.out.println("*****");
     }
 }
