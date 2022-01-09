@@ -22,7 +22,7 @@ public class JobData {
      * without duplicates, for a given column.
      *
      * @param field The column to retrieve values from
-     * @return List of all of the values of the given field
+     * @return List of all the values of the given field
      */
     public static ArrayList<String> findAll(String field) {
 
@@ -55,7 +55,7 @@ public class JobData {
     }
 
     /**
-     * Returns results of search the jobs data by key/value, using
+     * Returns results of search the job's data by key/value, using
      * inclusion of the search term.
      *
      * For example, searching for employer "Enterprise" will include results
@@ -74,9 +74,9 @@ public class JobData {
 
         for (HashMap<String, String> row : allJobs) {
 
-            String aValue = row.get(column);
+            String aValue = row.get(column).toLowerCase();
 
-            if (aValue.contains(value)) {
+            if (aValue.contains(value.toLowerCase())) {
                 jobs.add(row);
             }
         }
